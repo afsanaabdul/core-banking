@@ -19,7 +19,7 @@ create or replace procedure cb_customers_update
 p_first_name varchar2 default null,
 p_last_name varchar2 default null,
 p_birth_date date default null,
-p_gender char default null) is
+p_gender char default null, p_result ) is
 begin
     update cb_customers set
                                 first_name = nvl(p_first_name, first_name),
